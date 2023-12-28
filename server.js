@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended: true}))
 //ROUTES
 //Index
 app.get("/pokemon", (req, res) => {
-    res.send(Pokemon)
+    res.render("index.ejs", {Pokemon})
 })
 
 

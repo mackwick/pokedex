@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+</head>
+<body>
+    <h1>Pokemon Pokedex</h1>
+    <% for (let i=0; i<Pokemon.length; i++) { %>
+        <h3><%= Pokemon[i].name %></h3>
+        <img src="<%= Pokemon[i].img %>">
+        <div id="typeDiv">
+            <h5>Type: </h5>
+            <p><%= Pokemon[i].type[0] %></p>
+            <% if (Pokemon[i].type[1] != "null") { %>
+            <p><%= Pokemon[i].type[1]%></p>
+        <% } %>
+        </div>
+        <h5>Stats:</h5>
+        <ul id="stats">
+            <li>hp: <%= Pokemon[i].stats.hp %></li>
+            <li>attack: <%= Pokemon[i].stats.attack %></li>
+            <li>defense: <%= Pokemon[i].stats.defense %></li>
+            <li>spattack: <%= Pokemon[i].stats.spattack %></li>
+            <li>spdefense: <%= Pokemon[i].stats.spdefense %></li>
+            <li>speed: <%= Pokemon[i].stats.speed %></li>
+        </ul>
+    <% } %>
+</body>
+</html>
