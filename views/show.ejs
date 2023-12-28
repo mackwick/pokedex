@@ -4,9 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
-    <%- include("./cssjs.ejs") %>
+    <%- include("../public/cssjs.ejs") %>
 </head>
 <body>
-    
-</body>
+    <nav>
+        <a href="/pokemon">Go back.</a>
+    </nav>
+        <h1><%= showPokemon.name %></h1>
+        <img src="<%= showPokemon.img %>">
+        <div id="typeDiv">
+            <h5>Type: </h5>
+            <p><%= showPokemon.type[0] %></p>
+            <% if (showPokemon.type[1] != "null") { %>
+            <p><%= showPokemon.type[1]%></p>
+        <% } %>
+        </div>
+        <h5>Stats:</h5>
+        <ul id="stats">
+            <li>hp: <%= showPokemon.stats.hp %></li>
+            <li>attack: <%= showPokemon.stats.attack %></li>
+            <li>defense: <%= showPokemon.stats.defense %></li>
+            <li>spattack: <%= showPokemon.stats.spattack %></li>
+            <li>spdefense: <%= showPokemon.stats.spdefense %></li>
+            <li>speed: <%= showPokemon.stats.speed %></li>
+        </ul>
+        
 </html>

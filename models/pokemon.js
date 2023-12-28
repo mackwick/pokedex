@@ -50960,7 +50960,6 @@ const allPokemon = [
   ];
 
 const Pokemon = allPokemon.map(v => ({
-    id: v.id,
     name: v.name,
     img: v.img,
     type: v.type,

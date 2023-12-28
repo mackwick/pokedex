@@ -17,6 +17,15 @@ app.get("/pokemon", (req, res) => {
 })
 
 
+
+//Show
+app.get("/pokemon/:id", (req, res) => {
+    const id = req.params.id
+    const showPokemon = Pokemon[id]
+    res.render("show.ejs", {showPokemon})
+})
+
+
 //SERVER LISTENING
 app.listen(3000, () => {
     console.log(`Listening on port 3000`)
