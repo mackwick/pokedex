@@ -1,5 +1,4 @@
 //DEPENDENCIES
-require("dotenv").config()
 const express = require("express")
 const app = express()
 const Pokemon = require("./models/pokemon.js")
@@ -16,7 +15,18 @@ app.get("/pokemon", (req, res) => {
     res.render("index.ejs", {Pokemon})
 })
 
+//New
+app.get("/pokemon/new", (req, res) => {
+    res.render("new.ejs")
+})
 
+//Delete
+
+//Update
+
+//Create
+
+//Edit
 
 //Show
 app.get("/pokemon/:id", (req, res) => {
