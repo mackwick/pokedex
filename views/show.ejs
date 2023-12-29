@@ -13,7 +13,23 @@
         <h1><%= showPokemon.name %></h1>
         <img src="<%= showPokemon.img %>">
         <div id="typeDiv">
-            <h5>Type: </h5>
-            <p><%= showPokemon.type[0] %></p>
+            <h5>Type</h5>
+            <ul>
+                <li><%= showPokemon.type[0] %></li>
+                <% if (showPokemon.type[1] != null) { %>
+                <li><%= showPokemon.type[1]%></li> 
+                <% } %>
+                <% if (showPokemon.type[2] != null) { %>
+                <li><%= showPokemon.type[2]%></li>
+                <% } %>
+            </ul>
+        </div>
+        <div id="statsDiv">
+            <h5>Stats</h5>
+            <ul>
+            <li><b>HP:</b> <%= showPokemon.stats.hp %></li>
+            <li><b>Attack:</b> <%= showPokemon.stats.attack %></li>
+            <li><b>Defense:</b> <%= showPokemon.stats.defense %></li>
+        </ul>
         </div>
 </html>
