@@ -7,23 +7,27 @@
     <%- include("../public/cssjs.ejs") %>
 </head>
 <body>
+    <header>
+    <h1>Pokemon Pokedex</h1>
     <nav>
         <a href="/pokemon/new">Add a Pokemon</a>
     </nav>
-    <h1>Pokemon Pokedex</h1>
-    
-    <% for (let i=0; i<Pokemon.length; i++) { %>
-        <a href="/pokemon/<%= i %>"><h3><%= Pokemon[i].name %></h3>
-        <img src="<%= Pokemon[i].img %>">
-
-        <a href="/pokemon/<%= i %>/edit"><button>Edit</button></a>
-
-        <form action="/pokemon/<%= i %>?_method=DELETE" method="post">
-            <input type="submit" value="Remove pokemon">
-            
-        </form>
+    </header>
+    <div id="indexContainer">
+        <% for (let i=0; i<Pokemon.length; i++) { %>
+        <div id="pokes">
+            <a href="/pokemon/<%= i %>">
+                <h3><%= Pokemon[i].name %></h3>
+                <img src="<%= Pokemon[i].img %>" id ="indexImg">
+                <div id="textDiv">
+                    <a href="/pokemon/<%= i %>/edit"><button>Edit</button></a>
+                    <form action="/pokemon/<%= i %>?_method=DELETE" method="post">
+                        <input type="submit" value="Remove"> 
+                    </form>
+                </div>
+            </a>
         </div>
-    <% } %>
-    </a>
+        <% } %>
+    </div>
 </body>
 </html>

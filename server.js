@@ -33,6 +33,7 @@ app.delete("/pokemon/:id", (req, res) => {
 app.put("/pokemon/:id", (req, res) => {
     const id = req.params.id
     const body = req.body
+    // res.send(body)
     Pokemon[id] = body
     res.redirect("/pokemon")
 })

@@ -7,15 +7,22 @@
     <%- include("../public/cssjs.ejs") %>
 </head>
 <body>
+    <header>
+    <h1>Update <%= editPokemon.name %></h1>
     <nav>
         <a href="/pokemon">Go back.</a>
     </nav>
-    <h1>Update <%= editPokemon.name %></h1>
+    </header>
     <form action="/pokemon/<%= id %>?_method=PUT" method="post">
         <label>Name:<input type="text" name="name" value="<%= editPokemon.name %>"></label>
         <label>Link to image:<input type="text" name="img" value="<%= editPokemon.img %>"></label>
         <label>Type:<input type="text" name="type[0]" value="<%= editPokemon.type[0] %>"></label>
         
+
+        <label>Stat-HP:<input type="text" name="stats.hp" value="<%= editPokemon.stats.hp %>"></label>
+        <label>Stat-Attack:<input type="text" name="stats.attack" value="<%= editPokemon.stats.attack %>"></label>
+        <label>Stat-Defense:<input type="text" name="stats.defense" value="<%= editPokemon.stats.defense %>"></label>
+
         </div>
         <input type="submit" value="Update">
     </form>

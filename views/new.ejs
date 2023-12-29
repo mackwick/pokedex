@@ -7,10 +7,12 @@
     <%- include("../public/cssjs.ejs") %>
 </head>
 <body>
-<nav>
-    <a href="/pokemon">Go back.</a>
-</nav>
-    <h1>Add a New Pokemon</h1>
+<header>
+    <h1>Add a New Pokemon</h1>    
+    <nav>
+        <a href="/pokemon">Go back.</a>
+    </nav>
+</header>    
     <form action="/pokemon" method="post">
         <label>Name:<input type="text" name="name"></label>
         <label>Link to image:<input type="text" name="img"></label>
