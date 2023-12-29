@@ -2,12 +2,14 @@
 const express = require("express")
 const app = express()
 const Pokemon = require("./models/pokemon.js")
-
+const morgan = require("morgan")
+const methodOverride = require("method-override")
 
 //MIDDLEWARE
 app.use(express.static("public"))
 app.use(express.urlencoded({extended: true}))
-
+app.use(morgan("dev"))
+app.use(methodOverride("_method"))
 
 //ROUTES
 //Index
@@ -21,10 +23,20 @@ app.get("/pokemon/new", (req, res) => {
 })
 
 //Delete
+app.delete("/pokemon/:id", (req, res) => {
+    const id = req.params.id
+    Pokemon.splice(id, 1)
+    res.redirect("/pokemon")
+})
 
 //Update
 
 //Create
+app.post("/pokemon", (req, res) => {
+    const body = req.body
+    Pokemon.push(body)
+    res.redirect("/pokemon")
+})
 
 //Edit
 
