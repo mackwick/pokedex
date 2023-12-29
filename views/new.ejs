@@ -7,21 +7,14 @@
     <%- include("../public/cssjs.ejs") %>
 </head>
 <body>
+<nav>
     <a href="/pokemon">Go back.</a>
 </nav>
     <h1>Add a New Pokemon</h1>
     <form>
         <label>Name:<input type="text" name="name"></label>
-        <label>Link to image:<input type="link" name="image"></label>
-        <label>Type:<input type="link" name="type"></label>
-        </div>
-        <div id="statsDiv">Stats:
-            <label>hp:<input type="link" name="hp"></label>            
-            <label>attack:<input type="link" name="attack"></label>
-            <label>defense:<input type="link" name="defense"></label>
-            <label>spattack:<input type="link" name="spattack"></label>
-            <label>spdefense:<input type="link" name="spdefense"></label>
-            <label>speed:<input type="link" name="speed"></label>
+        <label>Image:<input type="file" name="img"></label>
+        <label>Type:<input type="text" name="type[0]"></label>
         </div>
         <input type="submit" value="Add Pokemon">
     </form>

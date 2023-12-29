@@ -50962,15 +50962,7 @@ const allPokemon = [
 const Pokemon = allPokemon.map(v => ({
     name: v.name,
     img: v.img,
-    type: v.type,
-    stats: {
-      hp: v.stats.hp,
-      attack: v.stats.attack,
-      defense: v.stats.defense,
-      spattack: v.stats.spattack,
-      spdefense: v.stats.spdefense,
-      speed: v.stats.speed
-    }
+    type: v.type
   }))
 
 module.exports = Pokemon

@@ -30,6 +30,12 @@ app.delete("/pokemon/:id", (req, res) => {
 })
 
 //Update
+app.put("/pokemon/:id", (req, res) => {
+    const id = req.params.id
+    const body = req.body
+    Pokemon[id] = body
+    res.redirect("/pokemon")
+})
 
 //Create
 app.post("/pokemon", (req, res) => {
@@ -39,6 +45,11 @@ app.post("/pokemon", (req, res) => {
 })
 
 //Edit
+app.get("/pokemon/:id/edit", (req, res) => {
+    const id = req.params.id
+    const editPokemon = Pokemon[id]
+    res.render("edit.ejs", {editPokemon, id})
+})
 
 //Show
 app.get("/pokemon/:id", (req, res) => {

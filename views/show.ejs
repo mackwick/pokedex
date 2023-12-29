@@ -15,19 +15,5 @@
         <div id="typeDiv">
             <h5>Type: </h5>
             <p><%= showPokemon.type[0] %></p>
-            <% if (showPokemon.type[1] != "null") { %>
-            <p><%= showPokemon.type[1]%></p>
-        <% } %>
-        </div>
-        <div id="statsDiv">
-        <h5>Stats:</h5>
-        <ul id="stats">
-            <li>hp: <%= showPokemon.stats.hp %></li>
-            <li>attack: <%= showPokemon.stats.attack %></li>
-            <li>defense: <%= showPokemon.stats.defense %></li>
-            <li>spattack: <%= showPokemon.stats.spattack %></li>
-            <li>spdefense: <%= showPokemon.stats.spdefense %></li>
-            <li>speed: <%= showPokemon.stats.speed %></li>
-        </ul>
         </div>
 </html>
