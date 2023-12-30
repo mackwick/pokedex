@@ -3,6 +3,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap" rel="stylesheet">
 
 <style>
+/* MAIN STYLING + INDEX PAGE */ 
 * {
     box-sizing: border-box;
 }
@@ -85,14 +86,33 @@ button, input[type="submit"] {
     font-size: 1rem;
 }
 
+/* EDIT PAGE */
 
+form {
+    display: flex;
+    flex-direction: column;
+}
 
-/* ************************** */
-/* MOBILE */
-/* ************************** */
+label {
+    margin: 10px 10px 10px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
 
-@media screen and (max-width: 700px) {
-    
+input[type="text"] {
+    border: none;
+    margin: 10px 10px;
+    font-family: 'Raleway', sans-serif;
+    border-radius: 6px;
+    padding: 5px;
+    margin: 3px 10px;
+    font-size: 1rem;
+}
+
+#updateBtn {
+    width: 250px;
+    margin: 20px 0;
 }
 
 </style>
