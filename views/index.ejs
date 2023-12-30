@@ -18,7 +18,7 @@
         <div id="pokes">
             <a href="/pokemon/<%= i %>">
                 <h3><%= Pokemon[i].name %></h3>
-                <img src="<%= Pokemon[i].img %>" id ="indexImg">
+                <img src="<%= Pokemon[i].img %>">
                 <div id="textDiv">
                     <a href="/pokemon/<%= i %>/edit"><button>Edit</button></a>
                     <form action="/pokemon/<%= i %>?_method=DELETE" method="post">

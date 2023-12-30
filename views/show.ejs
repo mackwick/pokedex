@@ -12,9 +12,10 @@
     <nav>
         <a href="/pokemon">Go back.</a>
     </nav>
-    </header>    
-        <img src="<%= showPokemon.img %>">
-        <div id="typeDiv">
+    </header> 
+    <div id="showContainer"> 
+        <img id="showImg" src="<%= showPokemon.img %>">
+        <div id="infoDiv">
             <h5>Type</h5>
             <ul>
                 <li><%= showPokemon.type[0] %></li>
@@ -25,8 +26,6 @@
                 <li><%= showPokemon.type[2]%></li>
                 <% } %>
             </ul>
-        </div>
-        <div id="statsDiv">
             <h5>Stats</h5>
             <ul>
                 <li>HP: 
@@ -40,4 +39,5 @@
                 </li>
             </ul>
         </div>
+    </div>  
 </html>

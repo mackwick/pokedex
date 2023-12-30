@@ -54,10 +54,9 @@ a:active {
     flex-direction: column;
     flex-wrap: wrap; 
     align-items: center;
-    flex-shrink: inherit;
 }
 
-#indexImg {
+img {
     border-radius: 10px;
     height: 20rem;
     width: 22rem;
@@ -86,7 +85,7 @@ button, input[type="submit"] {
     font-size: 1rem;
 }
 
-/* EDIT PAGE */
+/* EDIT + NEW PAGES */
 
 form {
     display: flex;
@@ -110,9 +109,48 @@ input[type="text"] {
     font-size: 1rem;
 }
 
-#updateBtn {
+#submitBtn {
     width: 250px;
     margin: 20px 0;
+}
+
+/* SHOW PAGE */
+
+
+
+#showContainer {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 10px 50px 0;
+    padding: 5px;
+    justify-content: space-between;
+    width: 55%;
+    border-radius: 20px;
+    background-color: rgb(120, 181, 120);
+}
+
+#infoDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#infoDiv > h5 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+#infoDiv > ul {
+    list-style: circle outside;
+    text-align: left;
+    padding: 5px 10px 0 0;
+}
+
+#showImg {
+    width: 80%;
+    height: max-content;
+    margin: 30px;
+    object-fit: fill;
 }
 
 </style>
